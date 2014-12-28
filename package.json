@@ -1,0 +1,26 @@
+{
+  "name": "the-universal-ui",
+  "version": "0.1.0",
+  "description": "An universal remote",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheUniversal/ui.git"
+  },
+  "keywords": [
+    "univeral",
+    "remote",
+    "web",
+    "ui",
+    "playback",
+    "player"
+  ],
+  "author": "Matias Klemola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheUniversal/ui/issues"
+  },
+  "homepage": "https://github.com/TheUniversal/ui",
+  "dependencies": {
+    "mercury": "^12.0.0"
+  }
+}
