@@ -6,16 +6,12 @@ var h = require('mercury').h;
 
 function App() {
     return hg.state({
-        words: ['Hello', 'world!', 'This is mercury', 'It is awesome']
+        words: ['Hello', 'world!', 'This is mercury']
     });
 }
 
-function stringToDiv(word) {
-    return h('div', [word])
-}
-
 App.render = function render(state) {
-    return h('div', state.words.map(stringToDiv));
+    return h('div', state.words.map(word => h('div', [word])));
 };
 
 hg.app(document.body, App(), App.render);
