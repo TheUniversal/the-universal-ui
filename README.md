@@ -1,4 +1,4 @@
-ui
+The Universal Web UI
 ==
 
-Web UI, soon...
+Web UI for The Universal project.
