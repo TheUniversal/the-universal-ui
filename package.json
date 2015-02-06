@@ -1,0 +1,39 @@
+{
+  "name": "the-universal-ui",
+  "version": "0.1.0",
+  "description": "An universal remote for applications",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheUniversal/ui.git"
+  },
+  "keywords": [
+    "univeral",
+    "remote",
+    "web",
+    "ui",
+    "playback",
+    "player"
+  ],
+  "author": "Matias Klemola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheUniversal/ui/issues"
+  },
+  "homepage": "https://github.com/TheUniversal/ui",
+  "dependencies": {
+    "global": "4.3.0",
+    "mercury": "12.0.0",
+    "socket.io-client": "1.3.2"
+  },
+  "devDependencies": {
+    "6to5": "2.9.4",
+    "6to5ify": "3.1.2",
+    "browserify": "8.1.0",
+    "connect": "3.3.4",
+    "del": "1.1.1",
+    "gulp": "3.8.10",
+    "serve-static": "1.8.1",
+    "vinyl-source-stream": "1.0.0"
+  }
+}
