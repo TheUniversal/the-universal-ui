@@ -18,17 +18,15 @@ function PlayPauseButton(socket) {
         console.log(command);
         let playing = command === 'play';
         state.playing.set(playing);
-        state.action.set(playing ? 'Play' : 'Pause');
+        state.action.set(playing ? 'Pause' : 'Play');
     });
 
     return state
 }
 
 PlayPauseButton.render = function(state) {
-    var channels = state.channels;
-
     return h('button', {
-      'ev-click': hg.send(channels.playOrPause)
+      'ev-click': hg.send(state.channels.playOrPause)
     }, state.action)
 };
 
