@@ -4,17 +4,24 @@ var hg = require('mercury');
 var h = require('mercury').h;
 
 function PlayPauseButton(socket) {
-    return hg.state({
+    var state = hg.state({
         action: hg.value('Play'),
         playing: hg.value(false),
         channels: {
             playOrPause: (state) => {
-                state.playing.set(!state.playing());
-                state.action.set(state.playing() ? 'Pause' : 'Play');
                 socket.emit('playback', state.playing() ? 'pause' : 'play');
             }
         }
-    })
+    });
+
+    socket.on('playback', function (command) {
+        console.log(command);
+        let playing = command === 'play';
+        state.playing.set(playing);
+        state.action.set(playing ? 'Play' : 'Pause');
+    });
+
+    return state
 }
 
 PlayPauseButton.render = function(state) {
