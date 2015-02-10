@@ -2,8 +2,9 @@
 
 var hg = require('mercury');
 var h = require('mercury').h;
+var socket = require('../../services/Socket');
 
-function SingleActionButton(action, displayValue, socket) {
+function SingleActionButton(action, displayValue) {
     return hg.state({
         displayValue: hg.value(displayValue),
         channels: {

@@ -2,8 +2,9 @@
 
 var hg = require('mercury');
 var h = require('mercury').h;
+var socket = require('../../services/Socket');
 
-function PlayPauseButton(socket) {
+function PlayPauseButton() {
     var state = hg.state({
         action: hg.value('Play'),
         playing: hg.value(false),

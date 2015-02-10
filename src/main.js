@@ -5,16 +5,14 @@ var hg = require('mercury');
 var h = require('mercury').h;
 var PlayPauseButton = require('./components/button/PlayPauseButton');
 var SingleActionButton = require('./components/button/SingleActionButton');
-var io = require('socket.io-client');
-var socket = io('http://127.0.0.1:3000');
 
 function App() {
     return hg.state({
         title: hg.value('Hi, this is The Universal!'),
-        playPauseButton: PlayPauseButton(socket),
-        stopButton: SingleActionButton('stop', 'Stop', socket),
-        previousButton: SingleActionButton('previous', 'Prev', socket),
-        nextButton: SingleActionButton('next', 'Next', socket)
+        playPauseButton: PlayPauseButton(),
+        stopButton: SingleActionButton('stop', 'Stop'),
+        previousButton: SingleActionButton('previous', 'Prev'),
+        nextButton: SingleActionButton('next', 'Next')
     });
 }
 
