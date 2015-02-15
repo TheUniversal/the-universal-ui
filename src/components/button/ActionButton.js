@@ -4,7 +4,7 @@ var hg = require('mercury');
 var h = require('mercury').h;
 var socket = require('../../services/Socket');
 
-function SingleActionButton(action, displayValue) {
+function ActionButton(action, displayValue) {
     return hg.state({
         displayValue: hg.value(displayValue),
         channels: {
@@ -15,10 +15,10 @@ function SingleActionButton(action, displayValue) {
     })
 }
 
-SingleActionButton.render = function (state) {
+ActionButton.render = function (state) {
     return h('button', {
         'ev-click': hg.send(state.channels.action)
     }, state.displayValue)
 };
 
-module.exports = SingleActionButton;
+module.exports = ActionButton;

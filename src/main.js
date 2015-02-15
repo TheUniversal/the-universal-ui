@@ -4,15 +4,15 @@ var document = require('global/document');
 var hg = require('mercury');
 var h = require('mercury').h;
 var PlayPauseButton = require('./components/button/PlayPauseButton');
-var SingleActionButton = require('./components/button/SingleActionButton');
+var ActionButton = require('./components/button/ActionButton');
 
 function App() {
     return hg.state({
         title: hg.value('Hi, this is The Universal!'),
         playPauseButton: PlayPauseButton(),
-        stopButton: SingleActionButton('stop', 'Stop'),
-        previousButton: SingleActionButton('previous', 'Prev'),
-        nextButton: SingleActionButton('next', 'Next')
+        stopButton: ActionButton('stop', 'Stop'),
+        previousButton: ActionButton('previous', 'Prev'),
+        nextButton: ActionButton('next', 'Next')
     });
 }
 
@@ -20,9 +20,9 @@ App.render = function render(state) {
     return h('div', [
         h('h1', state.title),
         PlayPauseButton.render(state.playPauseButton),
-        SingleActionButton.render(state.stopButton),
-        SingleActionButton.render(state.previousButton),
-        SingleActionButton.render(state.nextButton)
+        ActionButton.render(state.stopButton),
+        ActionButton.render(state.previousButton),
+        ActionButton.render(state.nextButton)
     ])
 };
 
