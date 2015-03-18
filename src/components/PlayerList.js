@@ -10,9 +10,9 @@ function PlayerList() {
         activePlayer: hg.value(null)
     });
 
-    socket.on('player', function (activePlayer) {
-        console.log('Active player: ', activePlayer);
-        state.activePlayer.set(activePlayer);
+    socket.on('player', function (player) {
+        console.log('Active player: ', player.name);
+        state.activePlayer.set(player.name);
     });
 
     return state;
