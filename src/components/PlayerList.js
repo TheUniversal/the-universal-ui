@@ -19,7 +19,7 @@ function PlayerList() {
 }
 
 PlayerList.render = function (state) {
-    return h('div', state.activePlayer)
+    return h('div.player-list', state.activePlayer)
 };
 
 module.exports = PlayerList;
