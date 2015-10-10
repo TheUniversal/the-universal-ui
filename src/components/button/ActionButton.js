@@ -1,8 +1,8 @@
 'use strict';
 
-var hg = require('mercury');
-var h = require('mercury').h;
-var socket = require('../../services/Socket');
+let hg = require('mercury');
+let h = require('mercury').h;
+let socket = require('../../services/Socket');
 
 function ActionButton(action, displayValue) {
     return hg.state({

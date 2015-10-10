@@ -1,10 +1,10 @@
 'use strict';
 
-var document = require('global/document');
-var hg = require('mercury');
-var h = require('mercury').h;
-var PlayerList = require('./components/PlayerList');
-var PlaybackControls = require('./components/PlaybackControls');
+let document = require('global/document');
+let hg = require('mercury');
+let h = require('mercury').h;
+let PlayerList = require('./components/PlayerList');
+let PlaybackControls = require('./components/PlaybackControls');
 
 function App() {
     return hg.state({

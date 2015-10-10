@@ -1,9 +1,9 @@
 'use strict';
 
-var hg = require('mercury');
-var h = require('mercury').h;
-var PlayPauseButton = require('./button/PlayPauseButton');
-var ActionButton = require('./button/ActionButton');
+let hg = require('mercury');
+let h = require('mercury').h;
+let PlayPauseButton = require('./button/PlayPauseButton');
+let ActionButton = require('./button/ActionButton');
 
 function PlaybackControls() {
     return hg.state({

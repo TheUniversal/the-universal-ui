@@ -1,12 +1,11 @@
 'use strict';
 
-var hg = require('mercury');
-var h = require('mercury').h;
-var socket = require('../services/Socket');
+let hg = require('mercury');
+let h = require('mercury').h;
+let socket = require('../services/Socket');
 
 function PlayerList() {
-
-    var state = hg.state({
+    let state = hg.state({
         activePlayer: hg.value(null)
     });
 

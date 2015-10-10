@@ -1,19 +1,18 @@
 'use strict';
 
-var hg = require('mercury');
-var h = require('mercury').h;
-var PlaybackCommands = require('the-universal-common/command/Commands').PLAYBACK;
-var PlaybackStatus = require('the-universal-common/playback/PlaybackStatus');
-var socket = require('../../services/Socket');
+let hg = require('mercury');
+let h = require('mercury').h;
+let PlaybackCommands = require('the-universal-common/command/Commands').PLAYBACK;
+let PlaybackStatus = require('the-universal-common/playback/PlaybackStatus');
+let socket = require('../../services/Socket');
 
 function PlayPauseButton() {
-    var state = hg.state({
+    let state = hg.state({
         action: hg.value(PlaybackCommands.PLAY),
         playing: hg.value(false),
         channels: {
             playOrPause: (state) => {
-                socket.emit('playback', state.playing() ?
-                    PlaybackCommands.PAUSE : PlaybackCommands.PLAY);
+                socket.emit('playback', state.playing() ? PlaybackCommands.PAUSE : PlaybackCommands.PLAY);
             }
         }
     });
