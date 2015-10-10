@@ -8,9 +8,9 @@ let ActionButton = require('./button/ActionButton');
 function PlaybackControls() {
     return hg.state({
         playPauseButton: PlayPauseButton(),
-        stopButton: ActionButton('stop', 'Stop'),
-        previousButton: ActionButton('previous', 'Prev'),
-        nextButton: ActionButton('next', 'Next')
+        stopButton: ActionButton.playbackButton('stop', 'Stop'),
+        previousButton: ActionButton.playbackButton('previous', 'Prev'),
+        nextButton: ActionButton.playbackButton('next', 'Next')
     })
 }
 
