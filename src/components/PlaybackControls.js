@@ -2,15 +2,16 @@
 
 let hg = require('mercury');
 let h = require('mercury').h;
+var Commands = require('the-universal-common/command/Commands');
 let PlayPauseButton = require('./button/PlayPauseButton');
 let ActionButton = require('./button/ActionButton');
 
 function PlaybackControls() {
     return hg.state({
         playPauseButton: PlayPauseButton(),
-        stopButton: ActionButton.playbackButton('stop', 'Stop'),
-        previousButton: ActionButton.playbackButton('previous', 'Prev'),
-        nextButton: ActionButton.playbackButton('next', 'Next')
+        stopButton: ActionButton.playbackButton(Commands.PLAYBACK.STOP, 'Stop'),
+        previousButton: ActionButton.playbackButton(Commands.PLAYBACK.PREVIOUS, 'Prev'),
+        nextButton: ActionButton.playbackButton(Commands.PLAYBACK.NEXT, 'Next')
     })
 }
 

@@ -2,13 +2,14 @@
 
 let hg = require('mercury');
 let h = hg.h;
+let Commands = require('the-universal-common/command/Commands');
 let ActionButton = require('./button/ActionButton');
 
 function VolumeControls() {
     return hg.state({
-        muteButton: ActionButton.volumeButton('mute', 'Mute'),
-        volDownButton: ActionButton.volumeButton('volume-down', '-'),
-        volUpButton: ActionButton.volumeButton('volume-up', '+')
+        muteButton: ActionButton.volumeButton(Commands.VOLUME.MUTE, 'Mute'),
+        volDownButton: ActionButton.volumeButton(Commands.VOLUME.DOWN, '-'),
+        volUpButton: ActionButton.volumeButton(Commands.VOLUME.UP, '+')
     })
 }
 
